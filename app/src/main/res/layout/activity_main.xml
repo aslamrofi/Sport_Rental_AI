@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A1A"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/app_bar_main"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="#1A1A2E"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:elevation="24dp"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        app:itemHorizontalPadding="24dp"
+        app:itemIconPadding="20dp"
+        app:itemIconSize="28dp"
+        app:itemMaxLines="1"
+        app:itemTextColor="#FFFFFF"
+        app:itemIconTint="#00E5FF"
+        app:itemShapeFillColor="#2600E5FF"
+        app:itemShapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:itemTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

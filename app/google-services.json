@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "22082145185",
+    "firebase_url": "https://sportrental-ai-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sportrental-ai",
+    "storage_bucket": "sportrental-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22082145185:android:26aa622db5b89907b0d9e0",
+        "android_client_info": {
+          "package_name": "com.sportrental.ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWhOHTVFXvvafzNQBleU5PS3pvM7OvPlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

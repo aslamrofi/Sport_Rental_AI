@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0A0A1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <!-- VENUE BOOKING CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#1A1A2E"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeColor="#3300E5FF"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SPORTRENTAL AI VENUE RESERVATION"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:textColor="#00E5FF"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- STEP 1: SELECT SPORT -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Select Sport Category"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerEquipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#00E5FF" />
+
+                <!-- STEP 2: FIND VENUE NEARBY -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Locate Nearest Sports Venue (5 km)"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Current Location: Tap button below to detect"
+                    android:textColor="#00E5FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnSelectLocation"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Find Venues Near Me (5 km)"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#00E5FF"
+                    app:iconTint="#00E5FF"
+                    app:icon="@android:drawable/ic_dialog_map"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvLocationLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌐 Visit Official Venue Website"
+                    android:textColor="#B388FF"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- STEP 3: BOOKING DATE -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Select Booking Date"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnSelectDates"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Select Booking Date"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#00E5FF"
+                    app:iconTint="#00E5FF"
+                    app:icon="@android:drawable/ic_menu_today"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvSelectedDates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No booking date selected"
+                    android:textAlignment="center"
+                    android:textColor="#CCCCCC"
+                    android:textStyle="italic"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/btnConfirmRental"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="CONFIRM RESERVATION"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#0A0A1A"
+                    android:letterSpacing="0.05"
+                    app:cornerRadius="8dp"
+                    app:backgroundTint="#00E5FF" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LIVE OPENAI INSIGHTS CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#1A1A2E"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:strokeColor="#33B388FF"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE SPORT INSIGHTS &amp; NEWS"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:textColor="#B388FF"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnTestOpenAi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="🔄 REFRESH LIVE SPORT INSIGHTS"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:backgroundTint="#7C4DFF"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tvPersonalizedRecommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🤖 Select a sport or tap button above to load safety guidelines..."
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSportsNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📰 Loading current week sports news..."
+                    android:textSize="15sp"
+                    android:textColor="#00E5FF"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvAiOpinion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🤖 AI Venue Advice..."
+                    android:textSize="14sp"
+                    android:textColor="#00E5FF"
+                    android:textStyle="italic"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
